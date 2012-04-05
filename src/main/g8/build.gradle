@@ -1,0 +1,17 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+version = '$version$'
+
+repositories { 
+  mavenCentral()
+}
+
+dependencies { 
+  testCompile "junit:junit:4.+"
+}
+
+task wrapper(type: Wrapper) { 
+  gradleVersion = '$gradle_version$'
+}
